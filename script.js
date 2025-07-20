@@ -59,7 +59,7 @@ function start(){
   }
 
   youChose.innerHTML = `
-  <p><strong>You:</strong> <span id="playerChoice"><img src="imgs/${playerMove}-emoji.png" class="casino-icon" alt="Rock Emoji"></span></p>
+  <p><strong>YOU:</strong> <span id="playerChoice"><img src="imgs/${playerMove}-emoji.png" class="casino-icon" alt="Rock Emoji"></span></p>
   `
   cpuChose.innerHTML = `
   <p><img src="imgs/${cpu}-emoji.png" class="casino-icon" alt="Rock Emoji"><span id="playerChoice"><strong> :CPU</strong></span></p>
