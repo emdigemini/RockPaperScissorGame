@@ -41,7 +41,7 @@ export function clearEverything(storeScore, statsBoard, resultMessage , youChose
     localStorage.setItem('statsBoard', JSON.stringify(statsBoard));
 
   youChose.innerHTML = `
-  <p><strong>You:</strong> <span id="playerChoice"></span></p>
+  <p><strong>YOU:</strong> <span id="playerChoice"></span></p>
   `
   cpuChose.innerHTML = `
   <p><span id="computerChoice"><strong> :CPU</strong></span></p>
