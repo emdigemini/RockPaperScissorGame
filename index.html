@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/money.css">
+</head>
+<body>
+<div class="statsboard">
+  <div class="streak">Win streak: 0</div>
+  <div class="stats">Wins: 0 | Loses: 0</div>
+</div>
+
+<hr class="divider" />
+
+<div class="moneyBoard">Money: $0</div>
+
+  <div class="scoreboard">
+  <p>Player: <span id="playerScore">0</span> | Computer: <span id="computerScore">0</span></p>
+  </div>
+
+    <div class="container">
+    <div class="play">Rock</div>
+    <div class="play">Paper</div>
+    <div class="play">Scissor</div>
+  </div>
+
+<div class="output-wrapper">
+  <div class="output" id="output1">
+    <p><strong>You:</strong> <span id="playerChoice"></span></p>
+  </div>
+
+  <div class="betting-table" id="bettingTable">
+    <p id="moneyBet">0</p>
+    <div class="bet">Add your bet
+      <div class="bet-options">
+        <div class="add-bet" data-value="10">10</div>
+        <div class="add-bet" data-value="50">50</div>
+        <div class="add-bet" data-value="100">100</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="output" id="output2">
+    <p><strong>:CPU</strong> <span id="computerChoice"></span></p>
+  </div>
+</div>
+
+  <div class="result" id="resultMessage">Result will appear here</div>
+
+<br><br><br>
+  <button id="reset">Clear Data</button>
+  
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

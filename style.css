@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at center, #8B0000, #2b0000);
+  color: #FFD700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.statsboard {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  position: relative;
+  top: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.streak {
+  margin-left: 3%;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.stats {
+  margin-right: 3%;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.divider {
+  width: 96%;
+  border: none;
+  height: 3px;
+  margin-top: 5px;
+  background: linear-gradient(to right, #FFD700, #B22222, #FFD700);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.scoreboard {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  background: linear-gradient(to bottom, #333, #111); /* casino carpet look */
+  border: 2px solid #FFD700;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+  justify-content: center;
+}
+
+.play {
+  background: linear-gradient(to bottom, #FFD700, #B8860B);
+  border: 2px solid #fff;
+  border-radius: 12px;
+  padding: 15px 25px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+.play:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
+}
+
+button {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 25px;
+  background-color: #C00000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff1a1a;
+}
+
+.casino-icon {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #FFD700; /* casino gold */
+  padding: 5px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 
+              0 5px 15px rgba(0, 0, 0, 0.5); /* glow + depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/*Overlay Result*/
+
+.overlayResult {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85); /* dark background for contrast */
+  display: none; /* show with JS */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlayContent {
+  background: linear-gradient(to bottom, #222, #111);
+  border: 4px solid #FFD700;
+  border-radius: 20px;
+  padding: 40px 60px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+.overlayContent p {
+  font-size: 3rem;
+  color: #FFD700;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 6px black;
+}
+
+.overlayContent button {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #C00000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.overlayContent button:hover {
+  background: #ff1a1a;
+  transform: scale(1.05);
+}
+
+.overlayClear {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85); /* dimmed overlay */
+  display: block; /* toggle with JS */
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.overlayData {
+  background: linear-gradient(to bottom, #222, #111);
+  border: 4px solid #FFD700;
+  border-radius: 20px;
+  padding: 40px 50px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+  animation: popIn 0.3s ease;
+}
+
+.overlayData p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.overlayData button {
+  margin: 0 10px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #C00000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.overlayData button:hover {
+  background: #ff1a1a;
+  transform: scale(1.05);
+}
+
+/* Optional entry animation */
+@keyframes popIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
